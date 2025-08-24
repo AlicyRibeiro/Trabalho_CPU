@@ -1,10 +1,8 @@
-# Sistemas-Digitais
- Implementação de instruções  para o processador desenvolvido em sala
-
 # Processador Didático de 16 bits com E/S em VHDL
 Este repositório contém o projeto de um processador didático de 16 bits desenvolvido em VHDL. O projeto foi realizado para a disciplina de Sistemas Digitais para Computadores (QXD0146) da Universidade Federal do Ceará (UFC), campus Quixadá, sob a orientação do Prof. Cristiano.
 
 O objetivo principal foi a implementação de um conjunto de instruções customizado, com foco nas operações de Pilha, ULA, Desvio e, principalmente, Entrada/Saída (E/S), em um processador com arquitetura baseada em Unidade de Controle e Datapath separados.
+
 
  ## Instruções Implementadas
  O processador implementa um subconjunto de instruções, incluindo:
@@ -43,6 +41,7 @@ A arquitetura segue um modelo clássico com Unidade de Controle e Caminho de Dad
 * **Linguagem:** VHDL
 * **Hardware Alvo:** FPGA Xilinx Zynq-7000 (especificamente a parte `xc7z010clg400-1`) 
 * **Placa de Desenvolvimento:** Digilent Zybo
+* **Link:https://www.xilinx.com/support/download.html
 
 
 ## Como Simular o Projeto
