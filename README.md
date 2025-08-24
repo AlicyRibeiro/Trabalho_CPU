@@ -7,7 +7,7 @@ Este repositório contém o projeto de um processador didático de 16 bits desen
 O objetivo principal foi a implementação de um conjunto de instruções customizado, com foco nas operações de Pilha, ULA, Desvio e, principalmente, Entrada/Saída (E/S), em um processador com arquitetura baseada em Unidade de Controle e Datapath separados.
 
  ## Instruções Implementadas
- O processador implementa um subconjunto de instruções, incluindo[cite: 29]:
+ O processador implementa um subconjunto de instruções, incluindo:
 
 * **Grupo de Pilha**: `PSH`, `POP`.
 * **Grupo de ULA**: `CMP`, `SHR`, `SHL`, `ROR`, `ROL`.
@@ -39,40 +39,26 @@ A arquitetura segue um modelo clássico com Unidade de Controle e Caminho de Dad
 
 
 ## Ferramentas Utilizadas
-* [cite_start]**Software:** Xilinx Vivado v2024.2 [cite: 1]
+* **Software:** Xilinx Vivado v2024.2 
 * **Linguagem:** VHDL
-* [cite_start]**Hardware Alvo:** FPGA Xilinx Zynq-7000 (especificamente a parte `xc7z010clg400-1`) [cite: 19, 20]
-* [cite_start]**Placa de Desenvolvimento:** Digilent Zybo [cite: 6]
+* **Hardware Alvo:** FPGA Xilinx Zynq-7000 (especificamente a parte `xc7z010clg400-1`) 
+* **Placa de Desenvolvimento:** Digilent Zybo
+
 
 ## Como Simular o Projeto
 
-Existem duas maneiras de executar a simulação de teste.
-
-### Método 1: Usando o Script Tcl (Recomendado)
-
-Este método é ideal para rodar os testes de forma rápida e padronizada, sem a necessidade de um projeto Vivado completo.
-
-1.  **Abra o Terminal Correto:** No Menu Iniciar do Windows, procure e abra o **`Vivado 2024.2 Tcl Shell`**.
-2.  **Navegue até a Pasta:** No terminal, navegue até a pasta onde o arquivo `run_simulation.tcl` está salvo.
-    ```sh
-    cd "C:/caminho/para/sua/pasta"
-    ```
-3.  **Verifique os Caminhos no Script:** Abra o arquivo `run_simulation.tcl` e garanta que as variáveis `sources_dir` e `sim_sources_dir` apontam para os locais corretos dos seus arquivos `.vhd`.
-4.  **Execute o Script:** No terminal, digite o comando:
-    ```tcl
-    vivado -mode tcl -source run_simulation.tcl
-    ```
-5.  O Vivado irá compilar todos os arquivos e abrir a janela do simulador com a forma de onda, executando o teste automaticamente.
-
-### Método 2: Usando a GUI do Vivado
-
+###  Usando a GUI do Vivado
 1.  Abra o projeto (`E_S.xpr`) no Vivado.
 2.  Na janela "Sources", certifique-se de que os top-levels estão configurados corretamente:
     * Para **Síntese**: `Processador.vhd` (`Set as Top` em "Design Sources").
     * Para **Simulação**: `tb_processador_io.vhd` (`Set as Top` em "Simulation Sources").
 3.  No painel esquerdo, clique em `Run Simulation -> Run Behavioral Simulation`.
 
-## Autores
-* Ana Ribeiro
-* (Membros da Equipe)
 
+* ## Autores e Contribuições
+Este projeto foi desenvolvido em equipe, com as seguintes contribuições:
+
+* **Ana Alicy Ribeiro**: Implementação e teste do grupo de instruções de **Entrada e Saída (`IN`, `OUT`)**, depuração final e integração do sistema.
+* **Ana Beatriz Leite Damascena**: Implementação do grupo de instruções da **ULA (`CMP`, `SHR`, `SHL`, `ROR`, `ROL`)**.
+* **Cicero Rodrigues da Silva Neto**: Implementação do grupo de instruções de **Pilha (`PSH`, `POP`)**.
+* **Fabio Rodrigues Borges Filho**: Implementação do grupo de instruções de **Desvio (`JMP`, `JEQ`, `JLT`, `JGT`)**.
