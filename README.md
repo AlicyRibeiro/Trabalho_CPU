@@ -37,11 +37,11 @@ A arquitetura segue um modelo clássico com Unidade de Controle e Caminho de Dad
 
 
 ## Ferramentas Utilizadas
-* **Software:** Xilinx Vivado v2024.2 
+* **Software:** [Xilinx Vivado ML Edition](https://www.xilinx.com/support/download.html)
 * **Linguagem:** VHDL
 * **Hardware Alvo:** FPGA Xilinx Zynq-7000 (especificamente a parte `xc7z010clg400-1`) 
 * **Placa de Desenvolvimento:** Digilent Zybo
-* **Link:https://www.xilinx.com/support/download.html
+
 
 
 ## Como Simular o Projeto
